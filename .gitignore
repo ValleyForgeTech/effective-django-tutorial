@@ -6,3 +6,4 @@ lib64
 include/
 /address.db
 venv
+.DS_Store

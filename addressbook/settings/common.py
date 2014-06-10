@@ -160,3 +160,8 @@ LOGGING = {
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'django.contrib.auth.views.login'
+
+# Import the correct settings file
+ENVIRONMENT = environ.get('ENVIRONMENT', 'local')
+
+exec('from %s import *' % ENVIRONMENT)
